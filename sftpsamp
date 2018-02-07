@@ -1,0 +1,5 @@
+import pysftp
+
+with pysftp.Connection("dev31.orionic.com") as sftp:
+    with sftp.cd('/'):             # temporarily chdir to public  # upload file to public/ on remote
+        sftp.get('remote_file')         # get a remote file
